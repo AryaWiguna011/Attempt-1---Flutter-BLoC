@@ -20,8 +20,12 @@ class MyApp extends StatelessWidget {
       child: MaterialApp(
         title: 'Three Page BLoC App',
         theme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
           useMaterial3: true,
+          colorScheme: ColorScheme.fromSeed(
+            seedColor: Colors.blue,
+            brightness: Brightness.light,
+          ),
+          appBarTheme: const AppBarTheme(elevation: 0, centerTitle: true),
         ),
         home: const Page1(),
         routes: {
